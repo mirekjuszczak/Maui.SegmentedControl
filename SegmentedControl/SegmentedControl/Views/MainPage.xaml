@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SegmentedControl.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:SegmentedControl.ViewModels"
+    Title="Sandbox menu"
+    x:DataType="viewModels:MainPageViewModel">
+
+    <VerticalStackLayout
+        Padding="30,0"
+        VerticalOptions="Center"
+        Spacing="25">
+
+        <Button
+            x:Name="GestureButton"
+            WidthRequest="300"
+            HorizontalOptions="Center"
+            Text="Gesture Sandbox"
+            Command="{Binding OnGoToGestureCommand}" />
+
+        <Button
+            x:Name="SegmentedControlButton"
+            WidthRequest="300"
+            HorizontalOptions="Center"
+            Text="SegmentedControl prototype"
+            Command="{Binding OnGoToSegmentedControlCommand}" />
+
+        <Button
+            x:Name="SwipePageButton"
+            WidthRequest="300"
+            HorizontalOptions="Center"
+            Text="Swipe page example"
+            Command="{Binding OnGoToSwipePageCommand}" />
+    </VerticalStackLayout>
+</ContentPage>

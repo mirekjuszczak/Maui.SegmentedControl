@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="SegmentedControl.Views.SwipePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:SegmentedControl.ViewModels"
+    Title="Swipe page"
+    x:DataType="viewModels:SwipePageViewModel">
+
+    <SwipeView>
+        <SwipeView.LeftItems>
+            <!--  Command possible  -->
+            <SwipeItems>
+                <SwipeItem
+                    BackgroundColor="LightPink"
+                    Text="Delete"
+                    IconImageSource="delete.png" />
+            </SwipeItems>
+        </SwipeView.LeftItems>
+        <SwipeView.RightItems>
+            <SwipeItems>
+                <SwipeItem
+                    BackgroundColor="LightGreen"
+                    Text="Favorite"
+                    IconImageSource="favorite.png" />
+                <SwipeItem
+                    BackgroundColor="LightYellow"
+                    Text="Share"
+                    IconImageSource="share.png" />
+            </SwipeItems>
+        </SwipeView.RightItems>
+        <!--  Content  -->
+        <VerticalStackLayout>
+            <Label
+                Margin="0,50"
+                HorizontalOptions="Center"
+                Text="TEST TEST TEST TEST TEST TEST TEST" />
+            <Label
+                Margin="0,50"
+                HorizontalOptions="Center"
+                Text="TEST TEST TEST TEST TEST TEST TEST" />
+
+        </VerticalStackLayout>
+    </SwipeView>
+</ContentPage>

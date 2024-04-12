@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="SegmentedControl.Views.GesturePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:SegmentedControl.ViewModels"
+    x:Name="ThisGesturePage"
+    Title="Gesture play"
+    x:DataType="viewModels:GesturePageViewModel">
+
+    <VerticalStackLayout
+        Margin="30,30"
+        VerticalOptions="Center">
+        <Label
+            Margin="0,50"
+            HorizontalOptions="Center"
+            Text="TEST TEST TEST TEST TEST TEST TEST" />
+        <Label
+            Margin="0,50"
+            HorizontalOptions="Center"
+            Text="TEST TEST TEST TEST TEST TEST TEST" />
+
+        <BoxView
+            x:Name="GestureContainer"
+            WidthRequest="100"
+            HeightRequest="40"
+            BackgroundColor="Crimson">
+            <BoxView.Clip>
+                <RoundRectangleGeometry
+                    CornerRadius="20"
+                    Rect="0,0,100,40" />
+            </BoxView.Clip>
+            <BoxView.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="OnPanUpdated" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+
+        <Label
+            Margin="0,50"
+            HorizontalOptions="Center"
+            Text="TEST TEST TEST TEST TEST TEST TEST" />
+
+        <Label
+            Margin="0,50"
+            HorizontalOptions="Center"
+            Text="TEST TEST TEST TEST TEST TEST TEST" />
+
+    </VerticalStackLayout>
+</ContentPage>
