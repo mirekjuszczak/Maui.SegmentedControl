@@ -9,15 +9,32 @@
     Title="Gesture play"
     x:DataType="viewModels:GesturePageViewModel">
 
+
     <VerticalStackLayout
-        Margin="30,30"
+        Padding="0,0"
         VerticalOptions="Center">
+
+        <Button
+            Margin="100,0,100,50"
+            BackgroundColor="DarkGreen"
+            Text="Back to start"
+            TextColor="Beige"
+            Clicked="Button_OnBackToStartClicked" />
+
         <Label
-            Margin="0,50"
+            Margin="0,20"
             HorizontalOptions="Center"
             Text="TEST TEST TEST TEST TEST TEST TEST" />
         <Label
-            Margin="0,50"
+            Margin="0,20"
+            HorizontalOptions="Center"
+            Text="TEST TEST TEST TEST TEST TEST TEST" />
+        <Label
+            Margin="0,20"
+            HorizontalOptions="Center"
+            Text="TEST TEST TEST TEST TEST TEST TEST" />
+        <Label
+            Margin="0,20"
             HorizontalOptions="Center"
             Text="TEST TEST TEST TEST TEST TEST TEST" />
 
@@ -37,12 +54,19 @@
         </BoxView>
 
         <Label
-            Margin="0,50"
+            Margin="0,20"
             HorizontalOptions="Center"
             Text="TEST TEST TEST TEST TEST TEST TEST" />
-
         <Label
-            Margin="0,50"
+            Margin="0,20"
+            HorizontalOptions="Center"
+            Text="TEST TEST TEST TEST TEST TEST TEST" />
+        <Label
+            Margin="0,20"
+            HorizontalOptions="Center"
+            Text="TEST TEST TEST TEST TEST TEST TEST" />
+        <Label
+            Margin="0,20"
             HorizontalOptions="Center"
             Text="TEST TEST TEST TEST TEST TEST TEST" />
 

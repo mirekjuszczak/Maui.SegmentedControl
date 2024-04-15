@@ -6,6 +6,8 @@ public partial class GesturePage : ContentPage
 {
     private double _transX;
     private double _transY;
+    private double _startPosisionX;
+    private double _startPositionY;
     
     public GesturePage(GesturePageViewModel viewModel)
     {
@@ -18,6 +20,8 @@ public partial class GesturePage : ContentPage
         switch (e.StatusType)
         {
             case GestureStatus.Started:
+                _startPosisionX = e.TotalX;
+                _startPositionY = e.TotalY;
                 break;
             
             case GestureStatus.Running:
@@ -36,5 +40,11 @@ public partial class GesturePage : ContentPage
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+    private void Button_OnBackToStartClicked(object sender, EventArgs e)
+    {
+        GestureContainer.TranslationX = _startPosisionX;
+        GestureContainer.TranslationY = _startPositionY;
     }
 }
